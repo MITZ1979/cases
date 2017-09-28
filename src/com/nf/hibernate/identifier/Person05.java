@@ -3,13 +3,15 @@ package com.nf.hibernate.identifier;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 /**
- * 使用生成器,必须先定义
- * 可在（@link Entity ）上面定义，也可以在属性上定义
+ * 使用 JPA 的语法，可以定制 table/sequence 类型的生成器
+ * 下面一个是定制 sequence 序列生成器的例子
  */
 @Entity
-public class Person04 {
+@SequenceGenerator(name = "xxx", schema = "vip", sequenceName = "seq_person05", initialValue = 1,allocationSize = 1)
+public class Person05 {
 
     @Id
     @GeneratedValue(generator = "xxx")

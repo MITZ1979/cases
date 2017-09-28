@@ -1,20 +1,16 @@
 package com.nf.hibernate.identifier;
 
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
- * 使用生成器,必须先定义
- * 可在（@link Entity ）上面定义，也可以在属性上定义
+ * Table
  */
-@Entity
-public class Person04 {
-
+public class Person06 {
     @Id
     @GeneratedValue(generator = "xxx")
-    private long id;
 
+    private long id;
     private String name;
 
     public long getId() {
